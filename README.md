@@ -1,9 +1,9 @@
 # SocialCops Node Task
 
 Build a simple stateless microservice in Nodejs, with three major functionalities -
-Authentication
-JSON patching
-Image Thumbnail Generation
+* Authentication
+* JSON patching
+* Image Thumbnail Generation
 
 ## Getting Started
 
