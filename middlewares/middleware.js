@@ -8,7 +8,7 @@ var path = require('path');
 var config = require('../config/key');
 
 const validity = function (req,res,next) {
-  // console.log(req.params);
+  console.log(req.query.url);
   let token = localStorage.getItem("jwtoken");
   if(token){
     jwt.verify(token,config.key,function (err,decoded) {

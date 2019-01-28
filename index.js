@@ -7,7 +7,7 @@ var app = express();
 
 // PORT FOR OUR API
 // =============================================================================
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3005;
 
 // ROUTES FOR OUR API
 // =============================================================================
@@ -24,9 +24,9 @@ router.get('/login',function(req,res) {
     password:'password123'
   };
   var token = jwt.sign({user},config.key);
-  logger.info(token);
+  // logger.info(token);
   middlewares.localStorage.setItem("jwtoken",token);
-  console.log(middlewares.localStorage.length);
+  // console.log(middlewares.localStorage.length);
   res.json(token);
 });
 
@@ -47,3 +47,9 @@ app.use('/api', router);
 app.listen(port,function(){
   logger.info('Server Started at port : '+port);
 });
+
+// EXPORT APP AND PORT
+// =============================================================================
+
+module.exports.app=app;
+module.exports.port=port;
