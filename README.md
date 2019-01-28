@@ -44,6 +44,7 @@ Deploy with [docker](https://docs.docker.com/).
 ```bash
 $ cd /to/dir/Dockerfile
 $ docker build -t app .
+$ docker run  -p 3000:3000 -d app
 ```
 
 ## Built With

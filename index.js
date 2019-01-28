@@ -24,9 +24,8 @@ router.get('/login',function(req,res) {
     password:'password123'
   };
   var token = jwt.sign({user},config.key);
-  // logger.info(token);
+  logger.info(token);
   middlewares.localStorage.setItem("jwtoken",token);
-  // console.log(middlewares.localStorage.length);
   res.json(token);
 });
 
